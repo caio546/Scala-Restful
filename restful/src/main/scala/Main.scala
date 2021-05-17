@@ -1,6 +1,7 @@
 import scala.io.StdIn.readLine;
 import scala.io.Source;
 import java.io.FileNotFoundException;
+import java.nio.file.Paths;
 
 object Main extends App {
   // "Banco de dados" da aplicação
@@ -51,7 +52,7 @@ object Main extends App {
     index = 0;
     frequencies = scala.collection.mutable.Map[String, Integer]();
     def create_data(path: String) = {
-      val bufferedSource = Source.fromFile("/home/caio/Documentos/Scala/teste/restful/src/main/scala/" + path);
+      val bufferedSource = Source.fromFile(Paths.get(".").toAbsolutePath + "/src/main/scala/" + path);
       for (line <- bufferedSource.getLines) {
         var processedLine = line.split(" ").map(w => w.replaceAll("[^a-zA-Z]", "").toLowerCase).toList;
         for (word <- processedLine) {
