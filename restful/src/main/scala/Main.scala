@@ -49,6 +49,7 @@ object Main extends App {
 
   def upload_post_handler(path: String): (String, Map[String, Array[String]]) = {;
     index = 0;
+    frequencies = scala.collection.mutable.Map[String, Integer]();
     def create_data(path: String) = {
       val bufferedSource = Source.fromFile("/home/caio/Documentos/Scala/teste/restful/src/main/scala/" + path);
       for (line <- bufferedSource.getLines) {
