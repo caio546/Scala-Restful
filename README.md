@@ -8,7 +8,7 @@ Para usar Scala Restful, siga estas etapas:
 
 * Dê o clone do projeto;
 * Vá para a pasta "restful";
-* Rode o seguinte comando:
+* Dentro da pasta "restful", rode o seguinte comando no terminal:
 ```
 sbt compile
 ```
@@ -18,5 +18,5 @@ sbt run
 ```
 * A partir de agora o programa deverá funcionar corretamente :)
 
-Obs: Junto com o arquivo Main.scala, há um arquivo de texto que o usuário poderá utilizar para fazer o upload do programa.
+Obs: Dentro da pasta restful, há um arquivo de texto que o usuário poderá utilizar para fazer o upload do programa.
 Nesse caso, na hora de realizar o upload do arquivo durante a execução, basta escrever "pride-and-prejudice.txt".
