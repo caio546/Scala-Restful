@@ -52,7 +52,7 @@ object Main extends App {
     index = 0;
     frequencies = scala.collection.mutable.Map[String, Integer]();
     def create_data(path: String) = {
-      val bufferedSource = Source.fromFile(Paths.get(".").toAbsolutePath + "/src/main/scala/" + path);
+      val bufferedSource = Source.fromFile(Paths.get(path).toAbsolutePath().toString());
       for (line <- bufferedSource.getLines) {
         var processedLine = line.split(" ").map(w => w.replaceAll("[^a-zA-Z]", "").toLowerCase).toList;
         for (word <- processedLine) {
